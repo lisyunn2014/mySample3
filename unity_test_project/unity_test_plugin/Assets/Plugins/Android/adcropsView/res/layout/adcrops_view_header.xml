@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:gravity="center"
+  android:padding="20dip"
+  android:id="@+id/adcrops_list_view_header" android:focusable="false" android:background="@drawable/adcrops_list_item">
+<TextView
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="@string/adcrops_list_view_header_text_view"
+android:id="@+id/adcrops_list_view_HeaderTextView" android:textColor="@color/adcrops_header_footer_text_color"/>
+<ProgressBar android:id="@+id/adcrops_list_view_header_progressbar" style="?android:attr/progressBarStyleSmall" android:layout_height="wrap_content" android:layout_width="wrap_content" android:visibility="gone"></ProgressBar>
+</LinearLayout>

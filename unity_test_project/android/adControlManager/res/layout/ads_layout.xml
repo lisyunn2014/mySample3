@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        >
+
+
+    <FrameLayout
+            android:id="@+id/top_banner_frame"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:visibility="invisible"
+            android:foregroundGravity="center_horizontal"
+            >
+        <WebView
+                android:id="@+id/top_web_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+    </FrameLayout>
+    
+
+    <FrameLayout
+            android:id="@+id/bottom_banner_frame"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:foregroundGravity="center_horizontal"
+            >
+    </FrameLayout>
+    <LinearLayout
+            android:id="@+id/web_view_frame"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            >
+        <include layout="@layout/self_ad"/>
+    </LinearLayout>
+ 
+</RelativeLayout>

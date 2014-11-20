@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">adControlInterface</string>
+    <string name="back">閉じる</string>
+    <string name="store">ストア</string>
+    <string name="sibuzo_apps">渋三あっぷす</string>
+</resources>

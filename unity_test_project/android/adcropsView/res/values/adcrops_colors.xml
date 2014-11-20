@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="adcrops_background_color">#000000</color>
+    <color name="adcrops_selected_color">#006400</color>
+    <color name="adcrops_text_color">#FFFFFF</color>
+    <color name="adcrops_button_text_color">#FFFFFF</color>
+    <color name="adcrops_header_footer_text_color">#FFFFFF</color>
+</resources>

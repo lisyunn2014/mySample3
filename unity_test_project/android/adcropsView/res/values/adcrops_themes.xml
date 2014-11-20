@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="adcrops_updown_theme" parent="android:Theme">   
+		<item name="android:windowAnimationStyle">@style/adcrops.Animation.UpDownActivity</item> 
+    </style>
+</resources>

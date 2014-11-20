@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="@drawable/adcrops_background">
+	<LinearLayout
+	  xmlns:android="http://schemas.android.com/apk/res/android"
+	  android:layout_width="fill_parent"
+	  android:padding="6dip" android:layout_height="wrap_content" android:baselineAligned="false" android:gravity="fill_horizontal">
+	    <TableLayout android:layout_height="wrap_content" android:layout_width="fill_parent">
+	        <TableRow android:layout_width="fill_parent" android:gravity="fill_horizontal" android:layout_height="fill_parent">
+	            <LinearLayout android:orientation="horizontal" android:weightSum="1" android:gravity="fill_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	                <ImageView android:layout_marginRight="6dip" android:src="@drawable/adcrops_blank_icon" android:layout_height="72dip" android:layout_width="72dip" android:id="@+id/adcrops_detail_view_appIcon"></ImageView>
+	                <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical" android:gravity="fill_horizontal" android:weightSum="1">
+	                    <TextView android:id="@+id/adcrops_detail_view_appName" android:text="appName" android:ellipsize="end" android:textSize="20dip" android:textStyle="bold|italic" android:gravity="top|left|fill_horizontal" android:layout_width="fill_parent" android:textColor="@color/adcrops_text_color" android:layout_height="27dp"></TextView>
+	                    <TextView android:id="@+id/adcrops_detail_view_marketName" android:text="marketName" android:ellipsize="end" android:gravity="left" android:textSize="12dip" android:textStyle="normal" android:layout_width="fill_parent" android:textColor="@color/adcrops_text_color" android:layout_height="wrap_content"></TextView>
+	                    <TextView android:ellipsize="end" android:gravity="left" android:textSize="12dip" android:textStyle="normal" android:layout_width="fill_parent" android:textColor="@color/adcrops_text_color" android:layout_height="wrap_content" android:id="@+id/adcrops_detail_view_category" android:text="category"></TextView>
+	                </LinearLayout>
+	            </LinearLayout>
+	        </TableRow>
+	        <TableRow android:layout_height="wrap_content" android:layout_width="fill_parent">
+	            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:gravity="right" android:layout_height="fill_parent">
+	            	<Button android:focusable="false" android:layout_gravity="right|center_horizontal" android:layout_weight="0.37" android:layout_marginBottom="2dip" android:background="@drawable/adcrops_install_button" android:gravity="center" android:typeface="sans" android:textSize="9dip" android:text="@string/adcrops_list_view_install_button" android:layout_height="25dip" android:layout_width="100dip" android:id="@+id/adcrops_detail_view_install_button" android:textColor="@color/adcrops_button_text_color"></Button>
+	            </LinearLayout>
+	        </TableRow>
+	        <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center|left">
+	            <LinearLayout android:layout_height="wrap_content" android:weightSum="1" android:gravity="left" android:layout_width="fill_parent">
+	                <ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/adcrops_money" android:id="@+id/adcrops_detail_view_price_imageView"></ImageView>
+		            <ImageView android:src="@drawable/adcrops_arrow_up" android:layout_width="wrap_content" android:layout_height="wrap_content" android:visibility="invisible" android:layout_marginTop="4dip" android:id="@+id/adcrops_detail_view_arrow_up"></ImageView>
+		            <ImageView android:src="@drawable/adcrops_arrow_down" android:layout_width="wrap_content" android:layout_height="wrap_content" android:visibility="invisible" android:layout_marginTop="4dip" android:id="@+id/adcrops_detail_view_arrow_down"></ImageView>
+	                <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="0円" android:id="@+id/adcrops_detail_view_price" android:textColor="@color/adcrops_text_color" android:layout_weight="0.37"></TextView>
+	                <ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/adcrops_point" android:id="@+id/adcrops_detail_view_point_imageView"></ImageView>
+	                <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_weight="0.44" android:text="0pt" android:id="@+id/adcrops_detail_view_point" android:textColor="@color/adcrops_text_color"></TextView>
+	            </LinearLayout>
+	        </TableRow>
+	        <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+	            <LinearLayout android:orientation="vertical" android:layout_height="fill_parent" android:layout_width="wrap_content">
+	                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/adcrops_detail_view_conversion_title_label" android:text="@string/adcrops_detail_view_conversion_title_label" android:textColor="@color/adcrops_text_color"></TextView>
+	                <EditText android:inputType="textMultiLine" android:focusable="false" android:layout_width="fill_parent" android:editable="false" android:gravity="top" android:id="@+id/adcrops_detail_view_conversionEditText" android:layout_height="63dp"></EditText>
+	            </LinearLayout>
+	        </TableRow>
+	        <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+	            <LinearLayout android:orientation="vertical" android:layout_height="fill_parent" android:layout_width="wrap_content">
+	                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/adcrops_detail_view_description_title_label" android:text="@string/adcrops_detail_view_description_title_label" android:textColor="@color/adcrops_text_color"></TextView>
+	                <EditText android:inputType="textMultiLine" android:focusable="false" android:layout_width="fill_parent" android:layout_height="78dp" android:id="@+id/adcrops_detail_view_descriptionEditText" android:gravity="top"></EditText>
+	            </LinearLayout>
+	        </TableRow>
+	        <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+	            <LinearLayout android:orientation="vertical" android:layout_height="wrap_content" android:layout_width="wrap_content">
+	                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/adcrops_detail_view_detail_title_label" android:text="@string/adcrops_detail_view_detail_title_label" android:textColor="@color/adcrops_text_color"></TextView>
+	                <EditText android:inputType="textMultiLine" android:focusable="false"  android:layout_width="307dp" android:editable="false" android:layout_height="109dp" android:id="@+id/adcrops_detail_view_detailEditText" android:gravity="top"></EditText>
+	            </LinearLayout>
+	        </TableRow>
+	        <TableRow android:layout_height="wrap_content" android:layout_width="fill_parent">
+	            <LinearLayout android:layout_width="fill_parent" android:gravity="center" android:weightSum="1" android:layout_height="50dip">
+	                <Button android:typeface="sans" android:textSize="9dip" android:layout_marginBottom="2dip" android:layout_height="25dp" android:focusable="false" android:layout_weight="0.20" android:gravity="center" android:layout_width="10dip" android:background="@drawable/adcrops_detail_close_button" android:id="@+id/adcrops_detail_view_close_button" android:text="@string/adcrops_detail_view_close_button"></Button>
+	            </LinearLayout>
+	        </TableRow>
+	    </TableLayout>  
+	</LinearLayout>
+</ScrollView>

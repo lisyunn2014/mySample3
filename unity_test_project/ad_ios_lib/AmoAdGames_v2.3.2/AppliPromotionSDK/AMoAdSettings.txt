@@ -1,0 +1,3 @@
+appKey=
+test=YES
+conversion=YES

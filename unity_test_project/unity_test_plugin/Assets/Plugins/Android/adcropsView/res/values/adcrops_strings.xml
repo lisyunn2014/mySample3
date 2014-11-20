@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="adcrops_appname" translatable="false">adcrops</string>
+    <string name="adcrops_list_view_header_text_view" translatable="false">再読み込み</string>
+    <string name="adcrops_list_view_footer_text_view" translatable="false">次の{0}件を読み込む</string>
+    <string name="adcrops_list_view_footer_text_view_no_data" translatable="false">次のデータはありません</string>
+    <string name="adcrops_list_view_price_text_view" translatable="false">{0}円</string>
+    <string name="adcrops_list_view_price_text_view_free" translatable="false">無料</string>
+    <string name="adcrops_list_view_point_text_view" translatable="false">{0}pt</string>
+    <string name="adcrops_list_view_install_button" translatable="false">インストール</string>
+    <string name="adcrops_list_view_installed_button" translatable="false">アンケート</string>
+    <string name="adcrops_list_view_error_dialog_title" translatable="false">エラーが発生しました。</string>
+    <string name="adcrops_list_view_error_dialog_msg_init_network" translatable="false">ネットワーク状況を確認して下さい。</string>
+    <string name="adcrops_list_view_error_dialog_msg_network" translatable="false">通信エラーが発生しました。</string>
+    <string name="adcrops_list_view_error_dialog_msg_security" translatable="false">お使いの端末ではご利用できません。</string>
+    <string name="adcrops_detail_view_conversion_title_label" translatable="false">成果条件</string>
+    <string name="adcrops_detail_view_description_title_label" translatable="false">説明文</string>
+    <string name="adcrops_detail_view_detail_title_label" translatable="false">詳細文</string>
+    <string name="adcrops_detail_view_close_button" translatable="false">閉じる</string>
+    <string name="adcrops_activity_animation_duration" translatable="false">300</string>
+</resources>

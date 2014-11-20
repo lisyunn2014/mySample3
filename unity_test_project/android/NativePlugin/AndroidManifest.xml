@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.unity3d.player"
+	android:installLocation="preferExternal"
+	android:theme="@android:style/Theme.NoTitleBar"
+    android:versionCode="1"
+    android:versionName="1.0">
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"
+        android:anyDensity="true"/>
+
+    <application
+		android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:debuggable="true">
+        <activity android:name="com.unity3d.player.UnityPlayerNativeActivity"
+                  android:launchMode="singleTask"
+                  android:label="@string/app_name"
+                  android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Ads/WebView Plugin value="true" -->
+            <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
+        </activity>
+                 <activity android:name="com.unity3d.player.faceBook.FaceBookActivity"                   
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  >
+        </activity>
+        
+        
+        <activity android:name="com.unity3d.player.twitter.TwitterActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  >
+        </activity> 
+        
+        <activity
+
+            android:name="com.facebook.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> 
+            
+         <!-- 渋三あっぷすWebView -->
+        <activity android:name="jp.co.transcosmos.nativeplugin.AppsviewActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait"
+                  android:theme="@android:style/Theme.Translucent" />
+            
+        <!-- Adcrops View Setting -->
+        
+        <activity android:name="net.adcrops.sdk.activity.AdcViewListActivity"
+        	android:theme="@style/adcrops_updown_theme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"></action>
+            </intent-filter>
+        </activity>
+        <activity android:name="net.adcrops.sdk.activity.AdcDetailActivity"
+        	android:theme="@style/adcrops_updown_theme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"></action>
+            </intent-filter>
+        </activity>
+
+        <meta-data android:value="1849" android:name="ADC_MEDIA_SITE_ID"></meta-data>
+        <meta-data android:value="97tU7bPR" android:name="ADC_MEDIA_SITE_KEY"></meta-data>
+        <meta-data android:value="true" android:name="ADC_USE_APP_UNIQUE_ID"></meta-data>
+
+        <meta-data android:value="6" android:name="ADC_LIST_COUNT"></meta-data>
+        <meta-data android:value="60" android:name="ADC_CONVERSION_TIMER_INTERVAL"></meta-data>
+        <meta-data android:value="false" android:name="ADC_USE_INSTALLED_LIST_ITEM"></meta-data>
+        <meta-data android:value="false" android:name="ADC_USE_POINT_DISPLAY_ITEM"></meta-data>
+        <meta-data android:value="0" android:name="ADC_TITLE_BAR_TYPE"></meta-data>
+        <meta-data android:value="http://d0.adcrops.net" android:name="ADC_INSTALLED_LIST_ITEM_URL"></meta-data>
+        
+   		<!-- AppC Core Setting Start -->
+        <meta-data
+            android:name="appc_media_key"
+            android:value="b726dfaff453d1ae0d1a771795e62bfe38b03652" />
+    
+        <activity
+            android:name="net.app_c.cloud.sdk.AppCAdActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|uiMode|touchscreen"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="net.app_c.cloud.sdk.AppCRecoveryActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|uiMode|touchscreen"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="net.app_c.cloud.sdk.AppCAgreementActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|uiMode|touchscreen"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <!-- AppC Core Setting End -->
+
+        <!-- AppC Core Setting Start -->
+        <!-- warningが出ますが android:exportedの記述はしないでください -->
+        <receiver android:name="net.app_c.cloud.sdk.AppCIDReceiver" >
+            <intent-filter>
+                <action android:name="jp.co.cayto.appc.sdk.android.remote.command.gid.search" />
+                <action android:name="jp.co.cayto.appc.sdk.android.remote.command.gid.set" />
+                <action android:name="jp.co.cayto.appc.sdk.android.remote.command.gid.remove" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="net.app_c.cloud.sdk.AppCPkgReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:label="BootStrap" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+            
+                <data android:scheme="package" >
+                </data>
+            </intent-filter>
+        </receiver>
+        <!-- AppC Core Setting End -->
+        
+        <!--  ウォール用 Activity の設定 -->
+		<activity
+				android:name="com.amoad.amoadsdk.AMoAdSdkWallActivity"
+				android:screenOrientation="unspecified"
+				android:configChanges="orientation|keyboardHidden">
+
+			<meta-data android:name="app_key" android:value="4S7ZH62YCYW3HBK2" />
+			<meta-data android:name="debug" android:value="false" />
+			<meta-data android:name="conversion" android:value="true" />
+		</activity>
+		<!-- アスタウォールの設定 -->
+		
+		<!-- GameFeat View Setting -->
+        <meta-data
+              android:name="gamefeat_site_id"
+                  android:value="4740" />
+
+        <activity
+                  android:name="jp.basicinc.gamefeat.android.sdk.view.GameFeatAppActivity"
+                  android:configChanges="orientation|keyboardHidden"
+                  android:label="GameFeat" >
+        </activity>
+        <activity
+            android:name="jp.basicinc.gamefeat.android.sdk.view.GameFeatAppChildActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="GameFeat"
+            android:screenOrientation="sensor" >
+        </activity>
+
+        <receiver
+            android:name="jp.basicinc.gamefeat.android.sdk.receiver.GameFeatBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>  
+        
+        <!-- アスタウォールの設定 -->
+    	<!-- アクティビティの設定を追加します。-->
+    	<activity android:name="jp.maru.mrd.astawall.MrdAstaWallActivity"
+        	android:screenOrientation="unspecified" android:label="@string/app_name">
+    	</activity>
+    	<!-- アスタウォールの設定 ここまで-->	
+    	
+    	<!-- adfurikun View Setting -->
+        <meta-data
+            android:name="adfurikun_appkey"
+            android:value="5220736fbb323cb531000003" />
+        <meta-data
+            android:name="adfurikun_test"
+            android:value="false" /> 
+         
+        <!-- CrossRoad Setting -->
+        <activity android:name="jp.co.transcosmos.crossroad.WallActivity"></activity>  
+
+    </application>
+
+    <!-- WebView Plugin -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+</manifest>
